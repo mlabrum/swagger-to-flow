@@ -1,0 +1,16 @@
+{
+  "name": "swagger-to-flow",
+  "version": "1.0.0",
+  "description": "Converts a Swagger Document into Flow Types",
+  "main": "index.js",
+  "author": "Matt Labrum",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^1.6.3",
+    "object.entries": "^1.0.3",
+    "yargs": "^6.4.0"
+  },
+  "bin": {
+    "swagger-to-flow": "./index.js"
+  }
+}
