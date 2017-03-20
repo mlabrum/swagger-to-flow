@@ -77,8 +77,12 @@ function parsePropertyType(type){
 function parsePropertyName(name){
 	switch(argv.transformProperty){
 		case 'firstCaseLower':
-			return name.charAt(0).toLowerCase() + name.slice(1)
+			if(!/[a-z]/.test(name)){ // Doesn't have a single lower case character, probably need to make the entire word lower case
+				return name.toLowerCase()
+			}else{
+				return name.charAt(0).toLowerCase() + name.slice(1)
+			}
 	}
 
-	return name
+	return name11
 }
