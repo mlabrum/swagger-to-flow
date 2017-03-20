@@ -62,6 +62,8 @@ function parsePropertyType(type){
 		}else if(type.items['$ref']) {
 			return `Array<${type.items['$ref'].replace('#/definitions/', '')}>`
 		}
+	}else if(!type.type && type["$ref"]){
+		return type['$ref'].replace('#/definitions/', '')
 	}else{
 		return swaggerToFlowTypes[type.type]
 	}
